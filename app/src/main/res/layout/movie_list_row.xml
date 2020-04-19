@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="movie"
+            type="com.gado.entity.database.respons.MovieResponseResult" />
+
+        <variable
+            name="ClickListener"
+            type="com.gado.movieapp.ui.adapter.MovieAdapter.ClickListener" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:elevation="4dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="@{(view)->ClickListener.onItemClick(view,movie)}"
+        android:transitionName="view"
+        app:cardCornerRadius="4dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:scaleType="centerCrop"
+                app:bindingPostUrl="@{movie.posterPath}" />
+
+        <com.google.android.material.textview.MaterialTextView
+
+
+            android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingStart="@dimen/md_keylinesV"
+                android:paddingTop="@dimen/md_keylinesV"
+                android:paddingEnd="@dimen/md_keylinesV"
+                android:text="@{movie.title}"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/secondFont" />
+
+        <com.google.android.material.textview.MaterialTextView
+
+
+            android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingStart="@dimen/md_keylinesV"
+                android:paddingEnd="@dimen/md_keylinesV"
+                android:singleLine="true"
+                android:text="@{movie.releaseDate}"
+                android:textColor="@color/second"
+                android:textSize="@dimen/thirdFont" />
+
+        <com.google.android.material.textview.MaterialTextView
+
+
+            android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/md_keylinesV"
+                android:singleLine="true"
+                android:text="@{String.valueOf(movie.voteAverage)}"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/thirdFont"
+                app:drawableEndCompat="@drawable/ic_rate" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:padding="@dimen/md_keylinesV"
+            android:visibility="@{movie.adult ? View.VISIBLE : View.GONE}"
+            app:srcCompat="@drawable/ic_18" />
+    </androidx.cardview.widget.CardView>
+</layout>

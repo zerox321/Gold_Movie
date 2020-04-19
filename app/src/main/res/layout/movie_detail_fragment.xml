@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.gado.movieapp.ui.movieDetail.MovieDetailViewModel" />
+
+        <variable
+            name="movie"
+            type="com.gado.entity.database.respons.MovieResponseResult" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.movieDetail.MovieDetailFragment">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="275dp"
+            android:scaleType="centerCrop"
+            android:transitionName="view"
+            app:bindingPostUrl="@{movie.backdropPath}" />
+
+        <com.google.android.material.textview.MaterialTextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingStart="@dimen/md_keylinesV"
+            android:paddingTop="@dimen/md_keylinesV"
+            android:paddingEnd="@dimen/md_keylinesV"
+            android:text="@{movie.title}"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/mainFont" />
+
+        <com.google.android.material.textview.MaterialTextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="@dimen/md_keylinesV"
+            android:text="@{movie.overview}"
+            android:textColor="@color/second"
+            android:textSize="@dimen/secondFont" />
+
+        <com.google.android.material.textview.MaterialTextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingStart="@dimen/md_keylinesV"
+            android:paddingEnd="@dimen/md_keylinesV"
+            android:singleLine="true"
+            android:text="@{movie.releaseDate}"
+            android:textColor="@color/second"
+            android:textSize="@dimen/thirdFont" />
+
+        <com.google.android.material.textview.MaterialTextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/md_keylinesV"
+            android:singleLine="true"
+            android:text="@{String.valueOf(movie.voteAverage)}"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/thirdFont"
+            app:drawableEndCompat="@drawable/ic_rate" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:scrollbars="horizontal"
+            app:adapter="@{viewModel.trailerAdapter}"
+            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+            tools:listitem="@layout/trailer_list_row" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

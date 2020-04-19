@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.gado.movieapp.ui.home.HomeFragment"
+        android:label="@string/title_popular"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_MovieDetailFragment"
+            app:destination="@id/MovieDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.gado.movieapp.ui.dashboard.DashboardFragment"
+        android:label="@string/title_top_rated"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_navigation_dashboard_to_MovieDetailFragment"
+            app:destination="@id/MovieDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.gado.movieapp.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/navigation_more"
+        android:name="com.gado.movieapp.ui.more.MoreFragment"
+        android:label="@string/title_more"
+        tools:layout="@layout/more_fragment" />
+    <fragment
+        android:id="@+id/MovieDetailFragment"
+        android:name="com.gado.movieapp.ui.movieDetail.MovieDetailFragment"
+        android:label="{title}"
+        tools:layout="@layout/movie_detail_fragment">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="movie"
+            app:argType="com.gado.entity.database.respons.MovieResponseResult"
+            app:nullable="true" />
+    </fragment>
+</navigation>

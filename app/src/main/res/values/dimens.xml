@@ -1,0 +1,19 @@
+<resources>
+    <dimen name="md_keylines">16dp</dimen>
+    <dimen name="button_padding">20dp</dimen>
+    <dimen name="app_bar_top">25dp</dimen>
+    <dimen name="md_keylinesVI">4dp</dimen>
+    <dimen name="md_keylinesV">7dp</dimen>
+    <dimen name="HeaderFont">20sp</dimen>
+    <dimen name="mainFont">14sp</dimen>
+    <dimen name="secondFont">12sp</dimen>
+    <dimen name="thirdFont">10sp</dimen>
+    <dimen name="fourthFont">8sp</dimen>
+    <dimen name="list_item_spacing">16dp</dimen>
+    <dimen name="list_item_spacing_half">8dp</dimen>
+    <dimen name="marker_image">45dp</dimen>
+    <dimen name="profile">75dp</dimen>
+    <dimen name="profileTopMargin">45dp</dimen>
+    <dimen name="teacher_detail_iv_h">220dp</dimen>
+
+</resources>
