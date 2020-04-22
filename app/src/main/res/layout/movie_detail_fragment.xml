@@ -138,6 +138,7 @@
             android:layout_margin="@dimen/md_keylines"
             app:backgroundTint="@color/colorAccent"
             app:layout_anchor="@id/appbar"
+            android:src="@drawable/ic_favorite_button"
             app:layout_anchorGravity="bottom|end" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
