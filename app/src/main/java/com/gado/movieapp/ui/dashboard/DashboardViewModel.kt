@@ -45,7 +45,7 @@ class DashboardViewModel(category: String, repo: MovieRepository) :
 
     override fun onItemClick(v: View, movie: MovieResponseResult) {
         val extras = FragmentNavigatorExtras(
-            v to "view"
+            v to "view2"
         )
         val args = Bundle()
         args.putParcelable("movie", movie)

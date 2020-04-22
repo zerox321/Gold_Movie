@@ -7,6 +7,7 @@ import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.bumptech.glide.request.RequestOptions
 import com.gado.movieapp.R
 import com.gado.network.EndPoint.BASE_POSTER_PATH
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
@@ -22,7 +23,16 @@ fun bindingPostUrl(imageView: ImageView, path: String?) {
         .transition(DrawableTransitionOptions.withCrossFade())
         .diskCacheStrategy(DiskCacheStrategy.DATA)
         .into(imageView)
-
+}
+@BindingAdapter("bindingCirclePostUrl")
+fun bindingCirclePostUrl(imageView: ImageView, path: String?) {
+    Glide.with(imageView.context)
+        .load("$BASE_POSTER_PATH$path")
+        .error(ContextCompat.getDrawable(imageView.context, R.mipmap.ic_launcher))
+        .transition(DrawableTransitionOptions.withCrossFade())
+        .diskCacheStrategy(DiskCacheStrategy.DATA)
+        .apply(RequestOptions().circleCrop())
+        .into(imageView)
 }
 
 @BindingAdapter("loadYouTube")

@@ -22,7 +22,7 @@ class ReservationsDataSource(
         viewModelScope.launch {
             repo.getMovieListTaskRepo(
                 category,
-                "ar",
+                "en",
                 params.key, { loading.postValue(it) }
             ) { reviewsList ->
                 val key = if (params.key > 1) params.key - 1 else 0
@@ -43,7 +43,7 @@ class ReservationsDataSource(
         viewModelScope.launch {
             repo.getMovieListTaskRepo(
                 category,
-                "ar",
+                "en",
                 FIRST_PAGE, { loading.postValue(it) }
             ) { reviewsList ->
                 reviewsList?.let {
@@ -63,7 +63,7 @@ class ReservationsDataSource(
         viewModelScope.launch {
             repo.getMovieListTaskRepo(
                 category,
-                "ar",
+                "en",
                 params.key, { loading.postValue(it) }
             ) { reviewsList ->
                 reviewsList?.let {

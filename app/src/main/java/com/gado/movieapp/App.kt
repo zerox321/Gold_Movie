@@ -32,6 +32,7 @@ class App : MultiDexApplication() {
             modules(repositoryModule)
 
             modules(viewModelModule)
+
         }
 
         if (BuildConfig.DEBUG)
