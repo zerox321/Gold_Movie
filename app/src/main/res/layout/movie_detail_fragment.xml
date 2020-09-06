@@ -52,6 +52,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/md_keylinesV"
+
                 android:text="@{movie.title}"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/mainFont"
