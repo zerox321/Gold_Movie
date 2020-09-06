@@ -57,7 +57,7 @@
                 android:text="@{movie.title}"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/mainFont"
-                app:layout_constraintBottom_toTopOf="@+id/rateTv"
+                app:layout_constraintBottom_toTopOf="@+id/releaseDate"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/avatar" />
 
@@ -66,7 +66,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingStart="@dimen/md_keylinesV"
-                android:paddingTop="@dimen/md_keylinesV"
                 android:paddingEnd="@dimen/md_keylinesV"
                 android:text="@{movie.releaseDate}"
                 android:textColor="@color/second"
