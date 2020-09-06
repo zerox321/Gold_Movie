@@ -23,9 +23,8 @@
             android:id="@+id/youtube_view"
             android:layout_width="match_parent"
             android:layout_height="240dp"
-            app:showFullScreenButton="false"
             app:loadYouTube="@{Trailer}"
-             />
+            app:showFullScreenButton="true" />
 
 
     </androidx.cardview.widget.CardView>

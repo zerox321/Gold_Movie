@@ -22,7 +22,7 @@
         android:elevation="4dp"
         android:foreground="?attr/selectableItemBackground"
         android:onClick="@{(view)->ClickListener.onItemClick(view,movie)}"
-        android:transitionName="view"
+        android:transitionName="@{movie.title}"
         app:cardCornerRadius="4dp"
         app:cardPreventCornerOverlap="true"
         app:cardUseCompatPadding="true">

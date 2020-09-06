@@ -9,7 +9,6 @@ import com.gado.movieapp.R
 import com.gado.movieapp.base.DataBindingFragment
 import com.gado.movieapp.databinding.FragmentHomeBinding
 import org.koin.android.viewmodel.ext.android.sharedViewModel
-import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 
 class HomeFragment : DataBindingFragment() {
@@ -26,6 +25,7 @@ class HomeFragment : DataBindingFragment() {
         ).apply {
             viewModel = this@HomeFragment.homeViewModel
             lifecycleOwner = this@HomeFragment
+            recyclerViewOnPreDraw(listView)
             executePendingBindings()
         }.root
     }

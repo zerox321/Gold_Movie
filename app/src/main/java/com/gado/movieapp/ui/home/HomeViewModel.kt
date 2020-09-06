@@ -10,10 +10,10 @@ import androidx.paging.PagedList
 import com.gado.entity.database.respons.MovieResponseResult
 import com.gado.movieapp.R
 import com.gado.movieapp.base.LiveCoroutinesViewModel
-import com.gado.movieapp.ui.adapter.MovieAdapter
 import com.gado.movieapp.pagedList.ReservationsDataSource
 import com.gado.movieapp.pagedList.ReservationsDataSourceFactory
 import com.gado.movieapp.repo.MovieRepository
+import com.gado.movieapp.ui.adapter.MovieAdapter
 import com.gado.movieapp.util.navigate
 
 class HomeViewModel(category: String, repo: MovieRepository) :
@@ -45,14 +45,16 @@ class HomeViewModel(category: String, repo: MovieRepository) :
 
     override fun onItemClick(v: View, movie: MovieResponseResult) {
         val extras = FragmentNavigatorExtras(
-            v to "view2"
+            v to "${movie.title}"
         )
 
-        val args = Bundle()
-        args.putParcelable("movie", movie)
-        args.putString("title", movie.title)
+        val args = Bundle().apply {
+            putParcelable("movie", movie)
+            putString("title", movie.title)
+        }
 
-        navigate(v, R.id.action_navigation_home_to_MovieDetailFragment,args,null,extras)
+
+        navigate(v, R.id.action_navigation_home_to_MovieDetailFragment, args, null, extras)
 
     }
 }

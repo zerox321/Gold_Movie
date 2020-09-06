@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
-    <color name="colorPrimaryRipple">#4D6200EE</color>
+    <color name="colorPrimary">#009688</color>
+    <color name="colorPrimaryDark">#00796B</color>
+    <color name="colorAccent">#C2185B</color>
+    <color name="colorPrimaryRipple">#4D009688</color>
     <color name="white">#ffffff</color>
     <color name="buttonRipple">#80FFFFFF</color>
     <color name="second">#7c7c7c</color>
