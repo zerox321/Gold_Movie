@@ -5,6 +5,7 @@ apply plugin: 'kotlin-kapt'
 apply from: '../dependencies.gradle'
 apply plugin: 'androidx.navigation.safeargs'
 
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion versions.compileSdk
@@ -109,6 +110,11 @@ dependencies {
 
     // Youtube lib
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
+
+    implementation 'com.google.firebase:firebase-analytics:17.5.0'
+
+    implementation 'com.google.firebase:firebase-inappmessaging-display-ktx:19.1.1'
+    implementation 'com.google.firebase:firebase-analytics-ktx:17.5.0'
 }
 
 apply from: '../spotless.gradle'

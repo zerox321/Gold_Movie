@@ -48,4 +48,8 @@
             app:argType="com.gado.entity.database.respons.MovieResponseResult"
             app:nullable="true" />
     </fragment>
+    <dialog
+        android:id="@+id/NoInterNetDialog"
+        android:name="com.gado.movieapp.ui.noInternet.NoInterNetDialog"
+        tools:layout="@layout/no_inter_net_dialog" />
 </navigation>

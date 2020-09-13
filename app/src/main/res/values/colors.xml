@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#009688</color>
     <color name="colorPrimaryDark">#00796B</color>
-    <color name="colorAccent">#C2185B</color>
+    <color name="colorAccent">#00796B</color>
     <color name="colorPrimaryRipple">#4D009688</color>
     <color name="white">#ffffff</color>
     <color name="buttonRipple">#80FFFFFF</color>

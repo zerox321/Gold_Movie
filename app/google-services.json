@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "293553711374",
+    "firebase_url": "https://laptop-ff455.firebaseio.com",
+    "project_id": "laptop-ff455",
+    "storage_bucket": "laptop-ff455.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:293553711374:android:9a322bf265732c16",
+        "android_client_info": {
+          "package_name": "com.example.zerox.labtop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "293553711374-tqjicjdsi0p861t6e44g1qhb7r4v26js.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7251u80TN1Kzbm2xdiXfdqlJhPFXdU7A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "293553711374-tqjicjdsi0p861t6e44g1qhb7r4v26js.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:293553711374:android:7984a546c2e03356e5cf5f",
+        "android_client_info": {
+          "package_name": "com.gado.movieapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "293553711374-tqjicjdsi0p861t6e44g1qhb7r4v26js.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7251u80TN1Kzbm2xdiXfdqlJhPFXdU7A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "293553711374-tqjicjdsi0p861t6e44g1qhb7r4v26js.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

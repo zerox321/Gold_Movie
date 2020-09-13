@@ -8,4 +8,10 @@
     <string name="title_top_rated">الأعلي تقيميا</string>
     <string name="title_more">المزيد</string>
     <string name="title_favorite">المفضله</string>
+
+    <string name="noConnection">
+    <font fgcolor='#2cc5a4' size="17"><b> لا يوجد اتصال بالإنترنت \n</b></font>
+    <font fgcolor='#7c7c7c' size="13"><i> يرجى التحقق من اتصالك وإعادة التحميل ..</i></font>
+    </string>
+
 </resources>

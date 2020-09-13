@@ -1,16 +1,15 @@
 package com.gado.movieapp.base
 
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.view.WindowManager
 import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import androidx.transition.TransitionInflater
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import androidx.fragment.app.DialogFragment
 
 
-abstract class DataBindingDialog : BottomSheetDialogFragment() {
+abstract class DataBindingDialog : DialogFragment() {
 
     protected inline fun <reified T : ViewDataBinding> binding(
         inflater: LayoutInflater,
@@ -18,12 +17,13 @@ abstract class DataBindingDialog : BottomSheetDialogFragment() {
         container: ViewGroup?
     ): T = DataBindingUtil.inflate(inflater, resId, container, false)
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        sharedElementEnterTransition =
-            TransitionInflater.from(context).inflateTransition(android.R.transition.move)
-
+    override fun onStart() {
+        super.onStart()
+        dialog?.window?.setLayout(
+            WindowManager.LayoutParams.MATCH_PARENT,
+            WindowManager.LayoutParams.WRAP_CONTENT
+        )
     }
 
-
 }
+
